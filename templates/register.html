@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-image: url("rio.png");
+        background-size: cover;
+    }
+    h2{
+        text-align: center;
+        padding: 20px;
+    }
+    .register{
+        max-width: 400px;
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        margin: 70px auto;
+        padding: 10px 20px;
+        background:linear-gradient(to bottom, rgb(74, 117, 117),rgb(25, 179, 179));
+        border-radius: 20px;
+        height: 500px;
+    }
+    #register{
+        margin-left: 40px;
+        padding-top: 30px;
+    }
+    label{
+        color: white;
+        font-family: sans-serif;
+        font-size: 18px;
+        font-style:normal;
+    }
+    #name{
+        width: 300px;
+        border: none;
+        border-radius: 3px;
+        outline: 0;
+        padding: 7px;
+    }
+    #num{
+        width: 300px;
+        border: none;
+        border-radius: 3px;
+        outline: 0;
+        padding: 7px;
+    }
+    #sub{
+        width: 100px;
+        border-radius: 3px;
+        padding: 7px;
+        text-align: center;
+        font-weight: 400;
+        border:none;
+        font-size: 18px;
+    
+    }
+    #sub:hover{
+        cursor: pointer;
+        color: aliceblue;
+        background-color: rgb(25, 179, 179);
+        border: 1px solid white;
+    }
+</style>
+
+<body>
+    <div class="register">
+        <form id="register" action="/register" method="POST">
+            <!-- <h2>Register Here</h2> -->
+            <label>Name:</label><br>
+            <input type="text" name="fname" id="name" placeholder="Enter ur first name"><br><br>
+            <label>Mobile Number:</label><br>
+            <input type="number" name="mnum" id="num" placeholder="Enter ur mobile number"><br><br>
+            <label>Email:</label><br>
+            <input type="email" name="email" id="name" placeholder="Enter email"><br><br>
+            <label>Password:</label><br>
+            <input type="password" name="password" id="name" placeholder="Enter password"><br><br>
+            <label>Confirm Password:</label><br>
+            <input type="password" name="pass" id="name" placeholder="re-enter password"><br><br>
+            <input type="radio" name="gen" value="male"><span id="gen">&nbsp; Male</span>&nbsp;&nbsp;
+            <input type="radio" name="gen" value="female"><span id="gen">&nbsp; Female</span>&nbsp;&nbsp;
+            <input type="radio" name="gen" value="other"><span id="gen">&nbsp; Other</span>&nbsp;&nbsp;
+            <br><br><input type="submit" value="SUBMIT" id="sub">
+        </form>
+    </div>
+</body>
+</html>

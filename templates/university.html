@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>University</title>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="{ url_for('static')}" />
+    </head>
+    <style>
+    *{
+    box-sizing: border-box;
+    }
+    .nav-links1{
+        justify-content: space-around;
+        padding: 8px;
+        list-style: none;
+        display: flex;
+        background-color: orangered;
+        position: relative;
+    }
+    .nav-links1 li a{
+        color: white;
+        font-size: 12px;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    .nav-links1 li a:hover{
+        background-color: #ddd;
+        color: black;
+        display: block;
+    }
+    .click{
+        border-radius: 10px;
+        border: none;
+        font-size: 14px;
+    }
+    .click a{
+        text-decoration: none;
+    }
+    .click:hover{
+        background-color: brown;
+    }
+    .click a:hover{
+        color: white;
+    }
+    .srch{
+        float: left;
+        font-size: 15px;
+        border-radius: 10px;
+    }
+    .menu{
+        position: relative;
+        display: flex;
+        padding: 10px 10px 10px 10px;
+    }
+    .but1, .but2, .but3, .but4, .but5, .but6{
+        color: black;
+        cursor: pointer;
+        background-color: transparent;
+        font-size: 17px;
+        border: none;
+        margin: 70px 0px 0px 40px;
+    }
+    .but1:hover, .but2:hover, .but3:hover, .but4:hover, .but5:hover, .but6:hover{
+        color: blue;
+    }
+    .slide{
+        width: 80%;
+        height: 75%;
+        margin: auto;
+    }
+    #slideimage{
+        width: 100%;
+        height: 550px;
+    }
+    </style>
+    <body>
+        <script>
+            var imgarr = ["uni1.jpeg","uni2.jpg","uni3.jpeg","uni4.jpeg","uni5.jpeg"];
+            var i=0;
+            function slides(){
+                document.getElementById('slideimage').src=imgarr[i];
+                if(i<(imgarr.length-1))
+                {
+                    i++;
+                }
+                else
+                {
+                    i=0;
+                }
+            }
+            setInterval(slides,2000);
+        </script>
+        <header>
+            <nav>
+                <ul class="nav-links1">
+                    <li><a href="#">Current students</a></li>
+                    <li><a href="#">Faculty and staffs</a></li>
+                    <li><a href="#">Alumni</a></li>
+                    <li><a href="#">Families and visitors</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Maps</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <button class="click"><a href="/register" target="_blank">Apply</a></button>
+                    <button class="click"><a href="/signin" target="_blank">Login</a></button>
+                    <input class="srch" type="text" placeholder="Search..." >
+                </ul>
+            </nav>
+        </header>
+        <div class="menu">
+            <img src="{ url_for('static', filename='uni.png')}" height="150" width="300"/>
+            <span>
+                <button class="but1">ABOUT</button>
+                <button class="but2">ADMISSIONS & AID</button>
+                <button class="but3">CAMPUS & COMMUNITY</button>
+                <button class="but4">RESEARCH</button>
+                <button class="but5">SPORTS</button>
+                <button class="but6">NEWS</button>
+            </span>
+        </div>
+        <div class="slide">
+            <img src="uni1.jpeg" alt="image" id="slideimage">
+        </div>
+    </body>
+</html>

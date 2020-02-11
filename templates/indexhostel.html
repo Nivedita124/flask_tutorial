@@ -1,0 +1,403 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>HOSTEL</title>
+	</head>
+	<style>
+	header {
+  	text-align: center;
+  	font-size: 35px;
+    background-image:url(hstl.jpg);
+	background-repeat:no-repeat;
+	width:100%;
+	overflow:hidden;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color: rgba(0,0,255,0.3);
+	
+	}
+	footer {
+ 	background-color:#999999;
+  	padding: 20px;
+  	text-align: center;
+  	font-size: 15px;
+  	color: white;
+
+	}
+
+	ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color:#800000;
+
+	}
+
+	li {
+	  float: right;
+	}
+
+	li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	}
+
+	li a:hover {
+	  background-color: #111;
+	}
+	/* .prasad {
+	 background-repeat: no-repeat;
+	 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	 color: rgba(0,0,255,0.5);
+	
+	} */
+	.beu {
+	color:#FF0000;
+	}
+	.block {
+	color:#990000;
+	width:100px;
+	text-align:left;
+	}
+	/* .col {
+	 color: rgba(255,0,0,0.6);
+	}*/
+
+	.dropdown {
+	  position: relative;
+	  display: inline-block;
+	}
+	
+	.dropdown-content {
+	  display: none;
+	  position: absolute;
+	  background-color: #f9f9f9;
+	  min-width: 160px;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  z-index: 1;
+	}
+	
+	.dropdown:hover .dropdown-content {
+	  display: block;
+	}
+	
+	.desc {
+	  padding: 15px;
+	  text-align: center;
+	}
+	form{
+        margin-top: 30px;
+        margin-left: 150px;
+        width: 1000px;
+        height: 500px;
+
+    }
+    h2{
+        text-align: center;
+        color: #800000;
+		background-color: #999999;
+    }
+	/* .col{
+		width: 95%;
+	} */
+    td{
+        width: 300px;
+        font-size: 18px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		text-align: right;
+    }
+    label{
+        font-size: 18px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		font-weight: bold;
+    }
+    input[type="text"],input[type="number"],input[type="date"],select{
+        font-size: 15px;
+        filter: drop-shadow(2px 2px 2px rgb(236, 166, 166));
+        width: 100%;
+		border: 1px solid rgb(236, 166, 166);
+		height: 30px;
+    }
+    tr{
+        height: 50px;
+    }
+    .save{
+        margin-left:220px;
+        width: 800px;
+        padding-left: 310px;
+    }
+    .save input, button{
+        padding: 10px;
+        margin: 10px;
+        width: 100px;
+        font-size: 15px;
+        font-family: fantasy;
+        cursor: pointer;
+        border-radius: 50px;
+        color: white;
+        background-color: #800000;
+		border: none;
+		border: 1px solid #800000;
+    }
+    .save input:hover, button:hover{
+        background-color: white;
+		color: black;
+    }
+
+	</style>
+	<body>
+	<header>
+			<h5>PNB Institute Of Technology And Management</h5>
+			<marquee><h6 class="beu">Online admission open...Please Hurry Up!!</h6></marquee>
+	</header>
+	<nav>
+		<ul>
+			<li><input type="text" placeholder="Search.." name="search"><button type="submit"><i class="fa fa-search"></i></button></li>
+			<li><a href="log.html">Login</a></li>
+			<li><a href="help.html">Help</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li class="dropdown"><a href="facilities.html">Facilities</a></li>
+		  	<li><a href="accomodation.html">Accomodation</a></li>
+		  	<li><a href="indexhostel.html">Home</a></li>
+		</ul>
+	</nav>
+		<div class="hostel">
+			<form action="/hostel" method="POST">
+				<h2><b><u>PERSONAL DETAILS</u></b></h2>
+				<table border="0">
+					<tr>
+						<td><label>Full Name:</label></td>
+						<td colspan="3"><input class="col" type="text" name="full_name"></td>
+					</tr>
+					<tr>
+						<td><label>Mobile:</label></td>
+						<td><input type="number" name="no"></td>
+						<td><label>Email ID:</label></td>
+						<td><input type="text" name="email"></td>
+					</tr>
+					<tr>
+						<td><label>Father's Name:</label></td>
+						<td><input type="text" name="f_name"></td>
+						<td><label>Father's Mobile:</label></td>
+						<td><input type="number" name="f_no"></td>
+					</tr>
+					<tr>
+						<td><label>Mother's Name:</label></td>
+						<td><input type="text" name="m_name"></td>
+						<td><label>Mother's Mobile:</label></td>
+						<td><input type="number" name="m_no"></td>
+					</tr>
+					<tr>
+						<td><label>Last semester attendance percentage:</label></td>
+						<td><input type="number" name="attendance"></td>
+						<td><label>Last published result:</label></td>
+						<td><input type="number" name="result"></td>
+					</tr>
+					<tr>
+						<td><label>D.O.B</label></td>
+						<td><input type="date" name="dob"></td>
+						<td><label>University Roll No.:</label></td>
+						<td><input type="number" name="roll_no"></td>
+					</tr>
+					<tr>
+						<td><label>Category:</label></td>
+						<td><select name="cat">
+							<option value="123">--Select--</option>
+							<option value="123">GEN</option>
+							<option value="123">SC</option>
+							<option value="123">ST</option>
+							<option value="123">OBC</option>
+						</select></td>
+						<td><label>Parent's Income(pa):</label></td>
+						<td><input type="number" name="income"></td>
+					</tr>
+					<tr>
+						<td><label>Gender:</label></td>
+						<td><input type="radio" name="gen" value="Male">Male<input type="radio" name="gen" value="Female">Female<input type="radio" name="gen"value="Other">Other</td>
+						<td><label>Current Year</label></td>
+						<td><select name="year">
+							<option value="456">--Select--</option>
+							<option value="456">2020</option>
+							<option value="456">2019</option>
+							<option value="456">2018</option>
+							<option value="456">2017</option>
+						</select></td>
+					</tr>
+				</table>
+			</form>
+			<div class="save">
+				<input class="btn" type="submit" value="SAVE">
+				<button type="button">NEXT</button>
+			</div>
+		</div>
+	
+		<!-- <table border="0" class="prasad" width="100%">
+	<tr><td colspan="2">
+
+		
+	</td></tr>
+	<tr><td colspan="2">
+		<div>
+			<h3 align="left"> <u>Personal Details</h3>
+		</div>
+	</td></tr>
+		<tr>	
+			<td width="200">
+					<span>Enter name:</span>
+			</td>
+		  <td>
+				<input type="text" maxlength="50">
+				<span class="col">&nbsp;*</span>
+			
+			</td>
+			<td rowspan="9" width="500">
+			
+			<div class="dropdown">
+			<p>bhfgf</p>
+			  <div class="dropdown-content">
+			  <img src="7.jpg" alt="Cinque Terre" width="300" height="200">
+			  <div class="desc">Girls Hostel</div>
+			  </div>
+			
+			
+			</td>
+		</tr>
+		<tr>
+			<td width="200">
+				<span>Gender:</span>
+			</td>
+			<td>
+				<input type="radio">Male<input type="radio">Female<input type="radio">Other <span class="col">&nbsp;*</span>
+			</td>
+		</tr>
+		<tr>
+			<td width="200">
+				<span>Date of birth:</span>
+			</td>
+			<td>
+				<input type="date"><span class="col">&nbsp;*</span>
+			</td>
+		</tr>
+		<tr>
+			<td width="200">
+				<span>Guardian's name:</span>
+			</td>
+			<td>
+				<input type="text"><span class="col">&nbsp;*</span>
+			</td>
+		</tr>
+		<tr>
+			<td width="200">
+				<span>Residential Address:</span>
+			</td>
+			<td>
+				<input type="text"><span class="col">&nbsp;*</span>
+			</td>
+		</tr>
+		<tr>
+			<td width="200">
+				<span>State:</span>
+			</td>
+			<td>
+			<select>
+  				<option value="bal">Select State...</option>
+  				<option value="t43">Andhra Pradesh</option>
+  				<option value="mercedes">Bihar</option>
+  				<option value="audi">Chattisgarh</option>
+  				<option value="audi">Delhi</option>
+  				<option value="audi">Orissa</option>
+  				<option value="audi">West Bengal</option>
+  			</select><span class="col">&nbsp;*</span> 
+  			</td>
+  		</tr>
+		<tr>
+			<td width="200">
+				<span> Permanent Address:</span>
+			</td>
+			<td>
+				<input type="text" class="nibi"><span class="col">&nbsp;*</span>
+			</td>
+		</tr>
+
+  		<tr>
+			<td width="200">
+				<span>Contact number:</span>
+			</td>
+			<td>
+				<input type="number" maxlength=10><span class="col">&nbsp;*</span>
+			</td>
+		</tr>
+		<tr>
+			<td width="200">
+				<span>Alternative Contact number:</span>
+			</td>
+			<td>
+				<input type="number" maxlength=10>
+			</td>
+		</tr>
+		<tr>
+			<td width="200">
+				<span>Email:</span>
+			</td>
+			<td>
+				<input type="email"><span class="col">&nbsp;*</span>
+			</td>
+		</tr>
+		<tr>
+			<td width="200">
+				<span>Distance:</span>
+			</td>
+			<td>
+				<input type="text"><span class="col">&nbsp;*</span>
+			</td>
+		<tr>
+		<tr>
+			<td width="200">
+				<span>Name of local guardian:</span><span class="col">&nbsp;*</span>
+			</td>
+			<td>
+				<input type="text">*
+			</td>
+		</tr>
+		<tr>
+			<td width="200">
+				<span>Address of Local guardian:</span>
+			</td>
+			<td>
+				<input type="text"><span class="col">&nbsp;*</span>
+			</td>
+		<tr>
+			<td>
+				<span>Emergency contact no(Contact no. of local guardian/parents):</span>
+			</td>
+			<td>
+				<input type="number"><span class="col">&nbsp;*</span>
+			</td>
+		</tr>
+		
+		<tr>
+			<td width="200">
+				<span>Photo:</span>
+			</td>
+			<td>
+				<input type="file"><span class="col">&nbsp;*</span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			
+				<input type="button" value="Submit">
+			</td>
+		</tr>
+		
+	</table> -->
+	<footer>
+		<a href="indexhostel.html">Home</a>  &nbsp;| &nbsp; <a href="about.html">About</a> &nbsp; | &nbsp; <a href="contact.html">Contact</a>  
+	</footer>
+	</body>
+</html>
